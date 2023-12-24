@@ -6,6 +6,7 @@
     "lint": "next lint",
     "start": "next start",
     "browse": "open http://localhost:3000",
+    "browse:repo": "open https://github.com/NinjaWars/nforge/pull",
     "deploy": "vercel deploy",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build --test"
