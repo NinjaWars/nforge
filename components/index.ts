@@ -20,10 +20,11 @@ export type { TypesetVariant } from './Typeset'
 export { default as Search, SearchCompact } from './Search'
 export { default as ErrorBoundary } from './ErrorBoundary'
 export { default as Feedbackify } from './Feedbackify/Feedbackify'
+export { default as News } from './News'
+export { default as AccountSummary } from './AccountSummary'
 /*
 
 export { default as AccountSummary } from './AccountSummary'
-export { default as News } from './News'
 export { default as Chat } from './Chat/Chat'
 
 
