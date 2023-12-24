@@ -1,0 +1,29 @@
+.search {
+}
+.search-field-area {
+    transition: transform 500ms ease-in-out;
+    transition: visibility 500ms ease-in-out;
+}
+.search-field-area.visible {
+    visibility: visible;
+    background: teal;
+}
+.search-field-area.invisible {
+    visibility: hidden;
+    background: rgb(214, 60, 12);
+}
+
+.search-compact {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.search-area {
+}
+
+.search-button-area {
+}
+
+.icon {
+    font-size: 2rem;
+}
