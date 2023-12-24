@@ -22,15 +22,11 @@ export { default as ErrorBoundary } from './ErrorBoundary'
 export { default as Feedbackify } from './Feedbackify/Feedbackify'
 /*
 
-export { default as Search, SearchCompact } from './Search'
 export { default as AccountSummary } from './AccountSummary'
 export { default as News } from './News'
-export { default as Logo, LogoArea } from './Logo'
 export { default as Chat } from './Chat/Chat'
 
 
-export type { NinjaClassOption } from './NinjaClass'
-export type { SelfStats } from './SelfStatus'
 export type { SChatMessage } from './Chat/Chat'
-export type { TypesetVariant } from './Typeset'
+
 */
