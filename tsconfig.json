@@ -1,0 +1,54 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "es2022",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "preserve",
+        "noFallthroughCasesInSwitch": true,
+        "incremental": true,
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+            "@/components/*": [
+                "./components/*"
+            ],
+            "@/ui/*": [
+                "./components/common/ui/*"
+            ],
+            "@/pages/*": [
+                "./pages/*"
+            ],
+            "@/hooks/*": [
+                "./hooks/*"
+            ],
+            "@/api/*": [
+                "./api/*"
+            ],
+            "@/utils/*": [
+                "./utils/*"
+            ],
+        }
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

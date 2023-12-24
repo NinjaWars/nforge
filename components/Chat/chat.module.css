@@ -1,0 +1,39 @@
+.chat .send-area {
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.chat .send-area form {
+    justify-content: flex-start;
+    display: flex;
+}
+.chat .send-area .send {
+    margin-left: auto;
+    margin-right: 0;
+}
+.chat .message-field {
+    width: 70%;
+}
+
+.chat .chat-messages-area {
+    margin: 0.3rem 1rem 1rem;
+}
+
+.chat-message {
+    padding-top: 0.2rem;
+}
+
+.chat-message strong::before {
+    content: '‹';
+}
+.chat-message strong::after {
+    content: '›';
+}
+
+.chat-message time {
+    font-size: smaller;
+    color: #cccccc;
+}
