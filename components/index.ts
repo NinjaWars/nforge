@@ -17,8 +17,10 @@ export { default as Chat } from './Chat/Chat'
 export type { SelfStats } from './SelfStatus'
 //export type { SChatMessage } from './Chat/Chat'
 export type { TypesetVariant } from './Typeset'
-/*
+export { default as Search, SearchCompact } from './Search'
 export { default as ErrorBoundary } from './ErrorBoundary'
+/*
+
 export { default as Search, SearchCompact } from './Search'
 export { default as AccountSummary } from './AccountSummary'
 export { default as News } from './News'
