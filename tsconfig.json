@@ -46,7 +46,16 @@
         }
     },
     "include": [
-        "src"
+        "src",
+        "components",
+        "pages",
+        "hooks",
+        "api",
+        "utils",
+        "jest.config.ts",
+        "./src/**/*.tsx",
+        "./src/**/*.ts",
+        "src/jest.config.ts"
     ],
     "exclude": [
         "node_modules"

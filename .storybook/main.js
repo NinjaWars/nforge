@@ -27,7 +27,7 @@ const config = {
     name: getAbsolutePath("@storybook/nextjs"),
     options: {
       builder: {
-        useSWC: false,
+        useSWC: true,
       }
     },
   },
