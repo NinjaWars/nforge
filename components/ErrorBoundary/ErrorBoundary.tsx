@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import react, { Component } from 'react'
 import logger from '@/utils/logger'
 import styles from './ErrorBoundary.module.css'
 
@@ -6,13 +6,15 @@ interface ErrorBoundaryProps {
     className?: string,
     children: React.ReactNode,
     areaName: string,
+    hasError?: boolean,
 }
 
 /**
  *  An error boundary to catch errors within it without killing the UI
  * @property {string} areaName problem occurred in the [areaName]
  */
-class ErrorBoundary extends Component<ErrorBoundaryProps, { hasError: boolean }> {
+class ErrorBoundary extends Component<ErrorBoundaryProps> {
+    state: { hasError: boolean }
     constructor(props: ErrorBoundaryProps) {
         super(props)
         this.state = { hasError: false }

@@ -1,6 +1,9 @@
 import ReactDOM from 'react-dom'
 import { default as Reframe } from './Reframe'
-import config from 'config'
+
+const config = {
+    remote: 'https://localhost/',
+}
 
 describe('<Reframe />', () => {
     it('renders an iframe of a url', () => {

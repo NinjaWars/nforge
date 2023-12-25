@@ -5,11 +5,13 @@ import avatarImage from 'images/avatar/sample_gravatar.png'
 mockProfile.avatarUrl = avatarImage // override avatar for mockProfile
 const mockUser = {...mockProfile}
 
-export default {
+const userContextConfig = {
     title: 'Context/UserContext',
     component: Avatar,
     decorators: [],
 }
+
+export default userContextConfig;
 
 const UserRenderer = () => {
     const {loading, user} = useUser()

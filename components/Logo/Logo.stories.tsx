@@ -1,11 +1,13 @@
 import { Tile, Logo, LogoArea } from '..'
 
-export default {
+const Meta = {
     title: 'Components/Logo',
     decorators: [
     ],
     component: Logo
 }
+
+export default Meta
 
 
 export const LogoAreaBasic = () => {

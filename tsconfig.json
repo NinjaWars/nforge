@@ -57,6 +57,11 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
+  "types": [
+    "node",
+    "jest",
+    "next",
+  ],
   "exclude": [
     "node_modules"
   ]

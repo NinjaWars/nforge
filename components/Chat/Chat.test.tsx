@@ -32,7 +32,7 @@ describe('<Chat />', () => {
             }
         })
         const div = document.createElement('div')
-        ReactDOM.render(<Chat chats={chats2} {...defaultArgs} />, div)
-        ReactDOM.unmountComponentAtNode(div)
+        const root = ReactDOM.createRoot(div).render(<Chat chats={chats2} {...defaultArgs} />)
+        root.unmount(div)
     })
 })

@@ -6816,6 +6816,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chromatic@npm:^10.2.0":
+  version: 10.2.0
+  resolution: "chromatic@npm:10.2.0"
+  bin:
+    chroma: dist/bin.js
+    chromatic: dist/bin.js
+    chromatic-cli: dist/bin.js
+  checksum: 8df1b4a828c7d5eb2614fcab9a1685f5be947a68f5f31733ebf2bbfab86f6b02c0ee99064bfe62b1457f05ddef285c1d36d5674208f778c815714c51c72a68bd
+  languageName: node
+  linkType: hard
+
 "chrome-trace-event@npm:^1.0.2":
   version: 1.0.3
   resolution: "chrome-trace-event@npm:1.0.3"
@@ -13830,6 +13841,7 @@ __metadata:
     "@types/react": "npm:^18.2.45"
     "@types/react-dom": "npm:^18.2.18"
     "@vercel/speed-insights": "npm:^1.0.2"
+    chromatic: "npm:^10.2.0"
     eslint: "npm:^8.56.0"
     eslint-config-next: "npm:^14.0.4"
     husky: "npm:^8.0.3"

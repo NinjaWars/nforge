@@ -2,7 +2,7 @@ import { Button } from '@material-ui/core'
 import { useEffect } from 'react'
 import ErrorBoundary from './ErrorBoundary'
 
-export default {
+const errorBoundaryConfig = {
     title: 'Components/ErrorBoundary',
     decorators: [
     ],
@@ -12,6 +12,8 @@ export default {
         }
     }
 }
+
+export default errorBoundaryConfig;
 
 const ErrorThrower = () => {
     useEffect(() => {

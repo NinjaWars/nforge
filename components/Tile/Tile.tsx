@@ -1,4 +1,5 @@
-import { makeStyles } from '@material-ui/core/styles'
+import React from 'react'
+import { makeStyles, Theme } from '@material-ui/core/styles'
 
 export interface TileProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string
@@ -7,7 +8,7 @@ export interface TileProps extends React.HTMLAttributes<HTMLDivElement> {
     compact?: boolean,
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
         boxSizing: 'border-box',
         padding: '1rem 0',

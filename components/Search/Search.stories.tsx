@@ -1,6 +1,6 @@
-import { Search, SearchCompact, Tile } from 'components'
+import { Search, SearchCompact, Tile } from '..'
 
-export default {
+const searchStory = {
     title: 'Components/Search',
     decorators: [
     ],
@@ -10,6 +10,8 @@ export default {
         }
     }
 }
+
+export default searchStory;
 
 
 export const SearchBasic = (args: any) => {

@@ -4,15 +4,6 @@
   "version": "0.1.0",
   "description": "The Ninja Game at ninjawars.net",
   "license": "CC-BY-SA-3.0",
-  "bugs": {
-    "url": "https://github.com/BitLucid/ninjawars/issues"
-  },
-  "keywords": [
-    "ninjawars.net",
-    "ninja",
-    "game",
-    "bbg"
-  ],
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -27,6 +18,15 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
+  "bugs": {
+    "url": "https://github.com/BitLucid/ninjawars/issues"
+  },
+  "keywords": [
+    "ninjawars.net",
+    "ninja",
+    "game",
+    "bbg"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
@@ -71,6 +71,7 @@
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
+    "chromatic": "^10.2.0",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
     "husky": "^8.0.3",

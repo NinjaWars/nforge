@@ -10,11 +10,13 @@ import {
 import { faRecycle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import theme from '.'
-import { Tile } from '../components'
+import { Tile } from '../../components'
 
-export default {
+const typographyTheme = {
     title: 'Typography/Theme',
 }
+
+export default typographyTheme;
 
 /* ============= Show Typography for the Site ================= */
 

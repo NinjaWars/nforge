@@ -16,6 +16,7 @@ import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 
 interface NewsDated extends Partial<INews> {
+    tags: any[]
     createdAt?: string,
     updatedAt?: string,
 }
