@@ -41,14 +41,14 @@ const fetchDataByModel = async (modelType: string, id: string, schema: unknown) 
 
 interface ModelInfo {
     name: string
-    fields: unknown
+    fields: Record<string, unknown>
     [key: string]: unknown
 }
 
 interface ModelInstance {
     _data: Record<string, unknown>
     name: string
-    fields: unknown
+    fields: Record<string, unknown>
     [key: string]: unknown
 }
 

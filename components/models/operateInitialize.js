@@ -1,4 +1,9 @@
 
+/**
+ * 
+ * @param {{fields:Record<string, unknown>}} model 
+ * @returns 
+ */
 const operateInitialize = (model) => {
     // loop over the fields and set them as properties on the model instance
     return Object.keys(model.fields).forEach((fieldName) => {

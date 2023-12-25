@@ -1,5 +1,4 @@
 import { CharacterProvider, useCharacter } from './CharacterContext'
-import ReactDOM from 'react-dom'
 import { createRoot } from 'react-dom/client'
 import { render, screen } from '@testing-library/react'
 import mockCharacter from '@/data/mockCharacter'

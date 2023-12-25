@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { default as Reframe } from './Reframe'
 
 const config = {
@@ -8,7 +8,8 @@ const config = {
 describe('<Reframe />', () => {
     it('renders an iframe of a url', () => {
         const div = document.createElement('div')
-        const root = ReactDOM.createRoot(div).render(<Reframe title="Fight" src={config.remote + 'fight'} />, div)
-        root.unmount(div)
+        const root = createRoot(div)
+        root.render(<Reframe title="Fight" src={config.remote + 'fight'} />)
+        root.unmount()
     })
 })
