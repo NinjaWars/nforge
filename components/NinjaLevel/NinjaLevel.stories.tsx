@@ -1,9 +1,11 @@
 import NinjaLevel from './NinjaLevel'
 
-export default {
+const NinjaLevelStory = {
     title: 'Components/NinjaLevel',
     decorators: [],
 }
+
+export default NinjaLevelStory;
 
 export const NinjaLevelBasic = (args: any) => {
     return (

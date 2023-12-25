@@ -1,5 +1,5 @@
 import TimeAgo from 'react-timeago'
-import { News as INews } from '@/models'
+import { News as INews } from '@/components/models'
 import { SText } from '..'
 import {
     Avatar,
@@ -8,6 +8,7 @@ import {
     CardContent,
     CardHeader,
     makeStyles,
+    Theme,
 } from '@material-ui/core'
 import MUISkeleton from '@material-ui/lab/Skeleton/Skeleton'
 // Or
@@ -16,7 +17,6 @@ import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 
 interface NewsDated extends Partial<INews> {
-    tags: any[]
     createdAt?: string,
     updatedAt?: string,
 }
@@ -27,7 +27,7 @@ interface INewsProps {
     dark?: boolean
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {},
     dark: {
         background: theme.palette.common.black,

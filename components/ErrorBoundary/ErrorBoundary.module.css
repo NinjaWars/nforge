@@ -1,11 +1,11 @@
 /** Generally use lowercase names **/
 .errorboundary {
-    /** Intentionally left blank as a template **/
     color: red;
     border: thick red dashed;
     border-radius: 0.2rem;
     padding: 1rem;
 }
+
 .errorboundary p {
     color: #333;
 }

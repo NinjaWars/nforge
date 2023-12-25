@@ -43,8 +43,14 @@
       "@/api/*": [
         "./api/*"
       ],
+      "@/theme/*": [
+        "./src/theme/*"
+      ],
       "@/utils/*": [
-        "./utils/*"
+        "./src/utils/*"
+      ],
+      "@/data/*": [
+        "./src/data/*"
       ],
       "@/*": [
         "./src/*"

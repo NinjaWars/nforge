@@ -7315,7 +7315,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:^6.7.1, css-loader@npm:^6.7.3":
+"css-loader@npm:^6.7.1, css-loader@npm:^6.7.3, css-loader@npm:^6.8.1":
   version: 6.8.1
   resolution: "css-loader@npm:6.8.1"
   dependencies:
@@ -13842,6 +13842,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.18"
     "@vercel/speed-insights": "npm:^1.0.2"
     chromatic: "npm:^10.2.0"
+    css-loader: "npm:^6.8.1"
     eslint: "npm:^8.56.0"
     eslint-config-next: "npm:^14.0.4"
     husky: "npm:^8.0.3"

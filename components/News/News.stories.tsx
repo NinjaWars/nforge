@@ -1,21 +1,12 @@
 import News from './News'
 import mockNews from '../models/mockNews'
-import { CssBaseline, Grid, ThemeProvider } from '@material-ui/core'
-import theme from '@/theme'
+import { Grid, } from '@material-ui/core'
 import NewsCreator from './NewsCreator'
 
-export default {
+import React from 'react'; // Add import statement for React
+
+const newsStory = {
     title: 'Components/News',
-    decorators: [
-        (storyFn: () => React.ReactNode) => (
-            <>
-                <CssBaseline />
-                <ThemeProvider theme={theme}>
-                    {storyFn()}
-                </ThemeProvider>
-            </>
-        )
-    ],
     argTypes: {
         onSubmit: {
             action: 'News form submitted'
@@ -24,7 +15,9 @@ export default {
             control: 'boolean'
         }
     }
-}
+};
+
+export default newsStory; // Assign the object to a variable before exporting as the default module
 
 
 export const NewsArea = (args: any) => {
