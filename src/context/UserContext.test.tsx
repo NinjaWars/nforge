@@ -14,7 +14,8 @@ describe('<UserContext />', () => {
     }
     it('renders a mock user in context', () => {
         const div = document.createElement('div')
-        const root = createRoot(
+        const root = createRoot(div)
+        root.render(
             <>
                 <UserProvider
                     value={{ user: { username: 'Bob' }, loading: false }}
