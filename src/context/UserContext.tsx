@@ -33,6 +33,11 @@ const UserProvider = (props: any) => {
                 token: sessionI?.token as string,
                 userId: '',
                 avatarUrl: '',
+                attributes: {
+                    email: '',
+                    phone: undefined,
+                }
+
             })
             setLoading(false)
         } catch (error) {

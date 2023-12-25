@@ -6,7 +6,8 @@ import {
 } from '@material-ui/core'
 import { faRecycle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
-import SInfo from 'stories/components/SInfo'
+import SInfo from '../../stories/components/SInfo';
+
 
 const colorsTheme = {
     title: 'Colors/Theme',

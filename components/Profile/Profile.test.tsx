@@ -23,7 +23,7 @@ describe('<Profile />', () => {
         render(<ThemeProvider theme={theme}>
             <Profile person={mockPerson} />
         </ThemeProvider>)
-        expect(screen.getByText(mockPerson.charName)).toBeInTheDocument()
+        expect(screen.getByText(mockPerson.charName ?? 'shouldNotMatchaskjsdf')).toBeInTheDocument()
 
     })
 

@@ -1,4 +1,11 @@
-import config from 'config'
+
+const localStorageDebugKey = 'debug'
+const checkForLocalStorageDebugKey = () => {
+    if (typeof window !== 'undefined') {
+        return window.localStorage.getItem(localStorageDebugKey)
+    }
+    return null
+}
 
 /**
  * Check whether in a debuggings mode
@@ -16,6 +23,6 @@ export const canDebug = () => {
             typeof process.env !== 'undefined' &&
             process.env.NODE_ENV === 'development') ||
         urlDebug ||
-        config.debug
+        (checkForLocalStorageDebugKey() === '1')
     )
 }

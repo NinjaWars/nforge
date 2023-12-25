@@ -1,5 +1,4 @@
-import { Character } from 'models'
-import avatarImage from 'images/avatar/sample_gravatar.png'
+import { Character } from '@/components/models'
 
 const mockCharacter: Character = {
     id: '23423-23423-23423-234',
@@ -10,7 +9,7 @@ const mockCharacter: Character = {
         id: '12312-15234-23423-2342',
         identity: 'George Washingtonz',
         fallbackName: 'Bill Wash',
-        avatarUrl: avatarImage,
+        avatarUrl: '/avatar/sample_gravatar.png',
     },
 }
 

@@ -1,4 +1,4 @@
-import { Physical } from 'models'
+import { Physical } from '@/components/models'
 
 const mockPhysical: Physical = {
     id: '23423-23423-23423-234',

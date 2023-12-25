@@ -1,5 +1,5 @@
 import { UserProvider, useUser } from './UserContext'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { render, screen } from '@testing-library/react'
 
 describe('<UserContext />', () => {
@@ -14,7 +14,7 @@ describe('<UserContext />', () => {
     }
     it('renders a mock user in context', () => {
         const div = document.createElement('div')
-        const root = ReactDOM.createRoot(
+        const root = createRoot(
             <>
                 <UserProvider
                     value={{ user: { username: 'Bob' }, loading: false }}

@@ -26,7 +26,7 @@ describe('<CharacterContext />', () => {
                     >
                         <CharacterRenderer />
                 </CharacterProvider>)
-            root.unmount(div)
+            root.unmount()
         })
     })
     xit('displays a mock user to the screen', () => {
@@ -42,6 +42,6 @@ describe('<CharacterContext />', () => {
                 </CharacterProvider>)
         })
         expect(screen.getByText(/Wash/i)).toBeTruthy()
-        root.unmount(div)
+        root.unmount()
     })
 })
