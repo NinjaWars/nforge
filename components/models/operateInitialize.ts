@@ -1,6 +1,6 @@
 
 /**
- * 
+ * Puts each field with a get and set on the model
  * @param {{fields:Record<string, unknown>}} model 
  * @returns 
  */
