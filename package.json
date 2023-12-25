@@ -24,6 +24,8 @@
   "bugs": {
     "url": "https://github.com/BitLucid/ninjawars/issues"
   },
+  "readme": "https://github.com/NinjaWars/nforge/blob/main/README.md",
+  "_id": "@0.1.0",
   "keywords": [
     "ninjawars.net",
     "ninja",
@@ -89,7 +91,5 @@
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "5.3.3"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "@0.1.0"
+  }
 }
