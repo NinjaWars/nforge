@@ -1,63 +1,60 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "target": "es2022",
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "esnext"
-        ],
-        "allowJs": true,
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "jsx": "preserve",
-        "noFallthroughCasesInSwitch": true,
-        "incremental": true,
-        "paths": {
-            "@/*": [
-                "./src/*"
-            ],
-            "@/components/*": [
-                "./components/*"
-            ],
-            "@/ui/*": [
-                "./components/common/ui/*"
-            ],
-            "@/pages/*": [
-                "./pages/*"
-            ],
-            "@/hooks/*": [
-                "./hooks/*"
-            ],
-            "@/api/*": [
-                "./api/*"
-            ],
-            "@/utils/*": [
-                "./utils/*"
-            ],
-        }
-    },
-    "include": [
-        "src",
-        "components",
-        "pages",
-        "hooks",
-        "api",
-        "utils",
-        "jest.config.ts",
-        "./src/**/*.tsx",
-        "./src/**/*.ts",
-        "src/jest.config.ts"
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
-    "exclude": [
-        "node_modules"
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "noFallthroughCasesInSwitch": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/ui/*": [
+        "./components/common/ui/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/hooks/*": [
+        "./hooks/*"
+      ],
+      "@/api/*": [
+        "./api/*"
+      ],
+      "@/utils/*": [
+        "./utils/*"
+      ],
+    "@/*": [
+      "./src/*"
     ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
