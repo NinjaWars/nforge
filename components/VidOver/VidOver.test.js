@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { default as VidOver } from './VidOver'
 import image from '../../images/avatar/sample_gravatar.png'
 import { ExpansionPanelActions } from '@material-ui/core'
@@ -13,7 +13,8 @@ describe('<VidOver />', () => {
         const originalError = console.error
         const error = jest.fn()
         console.error = error
-        const root = ReactDOM.createRoot(div).render(
+        const root = createRoot(div)
+        root.render(
 
             <VidOver
                 poster={image}
@@ -23,7 +24,7 @@ describe('<VidOver />', () => {
             >
                 top context placeholder text
             </VidOver>)
-        root.unmount(div)
+        root.unmount()
         expect(error).toHaveBeenCalledTimes(1)
         expect(error).toHaveBeenCalledWith(
             'Warning: unstable_flushDiscreteUpdates: Cannot flush updates when React is already rendering.%s',

@@ -1,5 +1,4 @@
 import { AuthProvider, useAuth } from './AuthContext'
-import ReactDOM from 'react-dom'
 import { createRoot } from 'react-dom/client'
 import { render, screen } from '@testing-library/react'
 const mockSession = {
@@ -18,14 +17,14 @@ describe('<AuthContext />', () => {
     }
     it('renders a mock user in context', () => {
         const div = document.createElement('div')
-        const root = createRoot(
+        const root = createRoot(div)
+        root.render(
             <AuthProvider
                 mockAuth={true}
                 value={{ session: mockSession, loading: false }}
             >
                 <AuthInfoRenderer />
-            </AuthProvider>,
-            div
+            </AuthProvider>
         )
         root.unmount()
     })
