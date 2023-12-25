@@ -1,4 +1,3 @@
-import { PropsWithChildren } from "react";
 import { Auth } from '@/auth'
 import { User } from '@/components/models/User'
 import { useEffect, useState, useMemo } from 'react'
@@ -39,7 +38,7 @@ interface AuthProviderProps extends Record<string, string | number | boolean | R
  * @param param0
  * @returns
  */
-const AuthProvider = ({ mockAuth = false, ...rest }: PropsWithChildren<AuthProviderProps>) => {
+const AuthProvider = ({ mockAuth = false, ...rest }: AuthProviderProps) => {
     const [loading, setLoading] = useState<boolean>(true)
     const [session, setSession] = useState<AuthDataInfo['session']>(undefined)
 
@@ -82,7 +81,7 @@ const AuthProvider = ({ mockAuth = false, ...rest }: PropsWithChildren<AuthProvi
         }
     }, [])
     useEffect(() => {
-        if (!mockAuth) {
+        if (mockAuth !== true) {
             obtainAuth()
         }
         return () => { }

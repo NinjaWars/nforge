@@ -13,7 +13,7 @@ const BasicStory = composeStory(Basic, Meta)
 describe('<Profile />', () => {
     it('renders the basic profile story', () => {
         render(<ThemeProvider theme={theme}><BasicStory /></ThemeProvider>)
-        expect(screen.getByText(mockPerson.charName)).toBeInTheDocument()
+        expect(screen.getByText(mockPerson.charName ?? 'should not match')).toBeInTheDocument()
 
     })
 

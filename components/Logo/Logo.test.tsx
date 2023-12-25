@@ -6,6 +6,6 @@ describe('<Logo />', () => {
         const div = document.createElement('div')
         const root = createRoot(div)
         root.render(<Logo />)
-        root.unmount(div)
+        root.unmount()
     })
 })

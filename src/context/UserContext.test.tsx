@@ -22,8 +22,7 @@ describe('<UserContext />', () => {
                 >
                     <UserRenderer />
                 </UserProvider>
-            </>,
-            div
+            </>
         )
         root.unmount();
     })
