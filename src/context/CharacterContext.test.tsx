@@ -1,5 +1,6 @@
 import { CharacterProvider, useCharacter } from './CharacterContext'
 import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { render, screen } from '@testing-library/react'
 import mockCharacter from '@/data/mockCharacter'
 import { act } from 'react-dom/test-utils'
@@ -16,7 +17,7 @@ describe('<CharacterContext />', () => {
     }
     xit('renders a mock user in context', () => {
         const div = document.createElement('div')
-        const root = ReactDOM.createRoot(div)
+        const root = createRoot(div)
         act(() => {
             root.render(
 
@@ -30,7 +31,7 @@ describe('<CharacterContext />', () => {
     })
     xit('displays a mock user to the screen', () => {
         const div = document.createElement('div')
-        const root = ReactDOM.createRoot(div)
+        const root = createRoot(div)
         act(() => {
             root.render(
 

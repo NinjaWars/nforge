@@ -1,5 +1,5 @@
 import { NinjaClassOption, SelfStatus } from 'components'
-import mockCharacter from 'data/mockCharacter'
+import mockCharacter from '@/data/mockCharacter'
 import { CharacterProvider, useCharacter } from './CharacterContext'
 
 const storyConfig = {

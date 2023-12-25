@@ -1,8 +1,10 @@
-import { Auth } from 'aws-amplify'
+import { PropsWithChildren } from "react";
+import { Auth } from '@/auth'
 import { User } from '@/models/User'
 import { useEffect, useState, useMemo } from 'react'
 import { createContext, useContext } from 'react'
-import logger from 'utils/logger'
+import logger from '@/utils/logger'
+
 
 export interface AuthDataInfo {
     loading: boolean
@@ -30,7 +32,6 @@ const AuthContext = createContext<AuthContextProps>({
 
 interface AuthProviderProps extends Record<string, string | number | boolean | React.ReactNode | symbol> {
     mockAuth?: boolean,
-    children: React.ReactNode,
 }
 
 /**
@@ -38,7 +39,7 @@ interface AuthProviderProps extends Record<string, string | number | boolean | R
  * @param param0
  * @returns
  */
-const AuthProvider = ({ mockAuth = false, ...rest }: AuthProviderProps) => {
+const AuthProvider = ({ mockAuth = false, ...rest }: PropsWithChildren<AuthProviderProps>) => {
     const [loading, setLoading] = useState<boolean>(true)
     const [session, setSession] = useState<AuthDataInfo['session']>(undefined)
 

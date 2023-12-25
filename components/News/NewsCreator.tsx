@@ -5,6 +5,7 @@ import {
     TextField,
     Grid,
     Button,
+    Theme,
 } from '@material-ui/core'
 import { News as INews } from '@/components/models'
 import News from './News'
@@ -15,7 +16,7 @@ import { User as userShape } from '../models/User'
 
 // React hook form: https://react-hook-form.com/get-started#IntegratingwithUIlibraries
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {},
     author: {
         padding: '1rem 0'

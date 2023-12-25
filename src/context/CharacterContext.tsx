@@ -1,7 +1,7 @@
 /* eslint-disable space-before-function-paren */
 
-import { DataStore } from '@aws-amplify/datastore'
-import createNinja from 'control/createNinja'
+import { DataStore } from '@/datastore'
+//import createNinja from 'control/createNinja'
 import { Character, Physical } from 'models'
 import { NinjaModel } from 'models/NinjaModel'
 import { createContext, useContext, useState, useEffect } from 'react'
@@ -50,7 +50,8 @@ const CharacterProvider = ({ mock = false, ...rest }: CharacterProviderProps) =>
             const physicalId = '234-234-234-234'
             const physical = await DataStore.query(Physical, physicalId)
 
-            const ninjaData = character && physical ? createNinja(character, physical) : undefined
+            //const ninjaData = character && physical ? createNinja(character, physical) : undefined
+            const ninjaData = undefined // @TODO: Uncomment the above with an actual create ninja functionality
             setNinja(ninjaData)
             setLoading(false)
         } catch (error) {
