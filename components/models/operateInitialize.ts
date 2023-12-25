@@ -1,10 +1,15 @@
 
+
+interface ModelShape {
+    name: string
+    fields: Record<string, unknown>
+    [key: string]: unknown
+}
+
 /**
  * Puts each field with a get and set on the model
- * @param {{fields:Record<string, unknown>}} model 
- * @returns 
  */
-const operateInitialize = (model) => {
+const operateInitialize = (model: ModelShape): void => {
     // loop over the fields and set them as properties on the model instance
     return Object.keys(model.fields).forEach((fieldName) => {
         Object.defineProperty(model.prototype, fieldName, {

@@ -1,4 +1,4 @@
-import schema from "@/components/models/index.js"
+import globalSchema from "@/components/models/index.js"
 import { initSchema } from "@/components/models/initSchema";
 
 
@@ -41,7 +41,6 @@ const fetchDataByModel = async (modelType: string, id: string, schema: unknown) 
 
 interface ModelInfo {
     name: string
-    fields: Record<string, unknown>
     [key: string]: unknown
 }
 
@@ -59,7 +58,7 @@ interface SchemaShape {
 }
 
 const initializeDataByModel = (modelType: string, schema: SchemaShape): ModelInstance => {
-    const model = schema.models[modelType] as ModelInfo
+    const model = schema.models[modelType]
     const fields = model.fields
     const data: Record<string, unknown> = {}
     Object.keys(fields).forEach((fieldName) => {
@@ -82,11 +81,11 @@ const collateDataFields = (model: ModelInfo, data: Record<string, unknown>) => {
 
 const DataStore = {
     query: async (storeType: unknown, id: string) => {
-        const allModels = { models: schema } // using global schema
+        const allModels = { models: globalSchema } // using global schema
         const namedStoreType = storeType as string
-        const emptyModel = initializeDataByModel(namedStoreType, allModels)
+        const unhydratedModel = initializeDataByModel(namedStoreType, allModels)
         const data = await fetchDataByModel(namedStoreType, id, allModels)
-        return collateDataFields(emptyModel, data)
+        return collateDataFields(unhydratedModel, data)
     }
 
 }
