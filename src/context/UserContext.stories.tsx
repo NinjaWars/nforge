@@ -1,7 +1,7 @@
 import { Avatar } from '@material-ui/core'
 import { UserProvider, useUser } from './UserContext'
-import mockProfile from 'data/mockProfile.json'
-import avatarImage from 'images/avatar/sample_gravatar.png'
+import mockProfile from '@/data/mockProfile.json'
+const avatarImage = '/images/avatar/sample_gravatar.png';
 mockProfile.avatarUrl = avatarImage // override avatar for mockProfile
 const mockUser = {...mockProfile}
 
