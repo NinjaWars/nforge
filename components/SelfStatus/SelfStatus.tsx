@@ -3,6 +3,7 @@ import { Health, NinjaClass, NinjaLevel, SText } from '..'
 import { NinjaClassOption } from '..' // A type
 import percentify from '@/utils/percentify'
 
+
 export interface SelfStats {
     class: NinjaClassOption
     classDisplay: NinjaClassOption

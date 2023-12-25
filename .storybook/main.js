@@ -1,4 +1,5 @@
 import { join, dirname } from "path";
+import path from "path";
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -36,6 +37,20 @@ const config = {
   },
   typescript: {
     reactDocgen: "react-docgen",
-  }
+  },
+  webpackFinal: async (config, { configType }) => {
+    // Solution for the main alias at least, via: https://himynameistim.com/blog/storybook-nextjs-with-typescript-paths-set
+    if (!config.resolve) {
+      return config;
+    }
+
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": path.resolve(__dirname, "../src"),
+    };
+
+    return config;
+  },
 };
+
 export default config;
