@@ -1,6 +1,6 @@
-import { ThemeProvider } from '@material-ui/styles'
+import { ThemeProvider } from '@material-ui/core/styles'
 import ReactDOM from 'react-dom'
-import theme from 'theme'
+import theme from '@/theme'
 import Typeset from './Typeset'
 
 describe('<Typeset />', () => {

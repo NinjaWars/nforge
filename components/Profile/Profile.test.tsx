@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@material-ui/styles'
+import { ThemeProvider } from '@material-ui/core/styles'
 import mockPerson from '@/mocks/mockPerson'
 import ReactDOM from 'react-dom'
 import theme from '@/theme'

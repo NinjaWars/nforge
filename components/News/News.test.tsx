@@ -1,6 +1,6 @@
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import News from './News'
-import mockNews from 'models/mockNews'
+import mockNews from '../models/mockNews'
 
 describe('<News />', () => {
     it('renders the News area', () => {
