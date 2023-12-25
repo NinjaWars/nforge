@@ -1,4 +1,5 @@
 import logo from './images/nw_bamboo_logo_soft.png'
+import Image from 'next/image'
 
 interface ILogoProps {
     className?: string
@@ -16,7 +17,7 @@ const styles = {
 const Logo = ({ className }: ILogoProps) => {
     return (
         <div className={className} style={styles.logo}>
-            <img src={logo} alt="NinjaWars" />
+            <Image src={logo} alt="NinjaWars" width={296} height={150} />
         </div>
     )
 }

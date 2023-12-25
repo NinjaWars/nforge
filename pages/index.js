@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 /* import { SpeedInsights } from '@vercel/speed-insights/next'; */
 
 export default function Home() {
+  // eslint-disable-next-line react/no-unknown-property
   return (
     <div className={styles.container}>
       <Head>
@@ -56,8 +57,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
+          Powered by Vercel
         </a>
       </footer>
 
@@ -104,6 +104,7 @@ export default function Home() {
             monospace;
         }
       `}</style>
+
 
       <style jsx global>{`
         html,

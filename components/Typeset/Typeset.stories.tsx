@@ -1,7 +1,8 @@
 import { ReactNode } from 'react'
 import Typeset from './Typeset'
+import { PropsWithChildren } from "react";
 
-export default {
+const typesetConfig = {
     title: 'Components/Typeset',
     decorators: [
     ],
@@ -9,9 +10,14 @@ export default {
     }
 }
 
+export default typesetConfig;
+
+interface ColorProps {
+    color: string,
+}
 
 export const TypesetBasic = (args: any) => {
-    const Color = ({ color, children }: { color: string, children: ReactNode }) => (
+    const Color = ({ color, children }: PropsWithChildren<ColorProps>) => (
         <div style={{ background: color }}>
             {children}
         </div>

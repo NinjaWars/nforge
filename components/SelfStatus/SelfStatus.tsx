@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, Theme } from '@material-ui/core/styles'
 import { Health, NinjaClass, NinjaLevel, SText } from '..'
 import { NinjaClassOption } from '..' // A type
 import percentify from '@/utils/percentify'
@@ -22,7 +22,7 @@ interface SelfStatusProps {
     loading?: boolean
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {},
     spaced: {
         padding: '0.3rem 1rem',

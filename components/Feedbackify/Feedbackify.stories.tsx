@@ -1,11 +1,13 @@
 import { makeStyles } from "@material-ui/core/styles"
 import { Feedbackify } from ".."
 
-export default {
+const feedbackifyConfig = {
     title: 'Components/Feedbackify',
     decorators: [
     ]
 }
+
+export default feedbackifyConfig;
 
 const useStyles = makeStyles(() => ({
     feedbackify: {

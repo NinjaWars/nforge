@@ -17,7 +17,7 @@ describe('<AuthContext />', () => {
     }
     it('renders a mock user in context', () => {
         const div = document.createElement('div')
-        ReactDOM.render(
+        const root = ReactDOM.createRoot(
             <>
                 <AuthProvider
                     mockAuth={true}
@@ -28,7 +28,7 @@ describe('<AuthContext />', () => {
             </>,
             div
         )
-        ReactDOM.unmountComponentAtNode(div)
+        root.unmount(div)
     })
     it('displays a mock user to the screen', () => {
         render(

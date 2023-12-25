@@ -13,7 +13,8 @@ describe('<VidOver />', () => {
         const originalError = console.error
         const error = jest.fn()
         console.error = error
-        const result = ReactDOM.render(
+        const root = ReactDOM.createRoot(div).render(
+
             <VidOver
                 poster={image}
                 sourcePairs={sourcePairs}
@@ -21,10 +22,8 @@ describe('<VidOver />', () => {
                 muted={false}
             >
                 top context placeholder text
-            </VidOver>,
-            div
-        )
-        ReactDOM.unmountComponentAtNode(div)
+            </VidOver>)
+        root.unmount(div)
         expect(error).toHaveBeenCalledTimes(1)
         expect(error).toHaveBeenCalledWith(
             'Warning: unstable_flushDiscreteUpdates: Cannot flush updates when React is already rendering.%s',

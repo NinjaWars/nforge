@@ -2,11 +2,13 @@ import { NinjaClassOption, SelfStatus } from 'components'
 import mockCharacter from 'data/mockCharacter'
 import { CharacterProvider, useCharacter } from './CharacterContext'
 
-export default {
+const storyConfig = {
     title: 'Context/CharacterContext',
     component: CharacterProvider,
     decorators: [],
 }
+
+export default storyConfig;
 
 const CharacterRenderer = () => {
     const { loading, ninja } = useCharacter()

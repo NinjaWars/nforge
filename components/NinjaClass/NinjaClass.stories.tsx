@@ -1,10 +1,12 @@
 import NinjaClass, { NinjaClassList, NinjaClassOption } from './NinjaClass'
 
-export default {
+const NinjaClassStory = {
     title: 'Components/NinjaClass',
     decorators: [
     ]
 }
+
+export default NinjaClassStory;
 
 export const NinjaClassAll = (args: any) => {
     return (

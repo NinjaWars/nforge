@@ -2,12 +2,14 @@
 import testVideo from '../assets/videos/movie.mp4'
 import image from '../assets/youtube.svg'
 import { VidOver } from '../'
+import type { Meta } from '@storybook/react';
 
-
-
-export default {
+const meta: Meta<typeof Button> = {
+    component: Button,
     title: 'Components/VidOver',
-}
+};
+
+export default meta;
 
 const sourcePairs = [{ source: testVideo, type: 'video/mp4' }]
 

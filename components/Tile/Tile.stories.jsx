@@ -1,11 +1,13 @@
 import { Tile } from '..'
 
-export default {
+const tileStory = {
     title: 'Components/Tile',
     argTypes: {
         theme: { control: { type: 'select', options: ['light', 'dark'] } },
     },
 }
+
+export default tileStory;
 
 export const basic = (args) => (
     <>

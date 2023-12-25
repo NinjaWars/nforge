@@ -1,11 +1,11 @@
 import { NinjaClassOption, SelfStatus } from '..'
 import { NinjaClassList } from '..'
 
-export default {
+const selfStatusConfig = {
     title: 'Components/SelfStatus',
-    decorators: [
-    ]
 }
+
+export default selfStatusConfig;
 
 const mockSelfStats = {
     class: 'tiger' as NinjaClassOption,

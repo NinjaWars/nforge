@@ -14,7 +14,7 @@ describe('<UserContext />', () => {
     }
     it('renders a mock user in context', () => {
         const div = document.createElement('div')
-        ReactDOM.render(
+        const root = ReactDOM.createRoot(
             <>
                 <UserProvider
                     value={{ user: { username: 'Bob' }, loading: false }}
@@ -24,7 +24,7 @@ describe('<UserContext />', () => {
             </>,
             div
         )
-        ReactDOM.unmountComponentAtNode(div)
+        root.unmount(div);
     })
     it('displays a mock user to the screen', () => {
         render(

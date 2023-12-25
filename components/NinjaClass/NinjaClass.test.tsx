@@ -4,7 +4,6 @@ import NinjaClass from './NinjaClass'
 describe('<NinjaClass />', () => {
     it('renders the NinjaClass area', () => {
         const div = document.createElement('div')
-        ReactDOM.render(<NinjaClass ninjaClass='tiger'>Tiger</NinjaClass>, div)
-        ReactDOM.unmountComponentAtNode(div)
+        const root = ReactDOM.createRoot(div).render(<NinjaClass ninjaClass='tiger'>Tiger</NinjaClass>)
     })
 })

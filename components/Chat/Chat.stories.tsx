@@ -24,9 +24,11 @@ const log = (msg: string) => {
 export const ChatMessageRawList = () => (
     <>
         {[...mockChats].map((chat, index) => (
-            <ChatMessage key={index} by={chat.by} datetime={chat.datetime}>
-                {chat.message}
-            </ChatMessage>
+            <div key={index}>
+                <ChatMessage by={chat.by} datetime={chat.datetime}>
+                    {chat.message}
+                </ChatMessage>
+            </div>
         ))}
     </>
 )

@@ -8,7 +8,7 @@ import { faRecycle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import SInfo from 'stories/components/SInfo'
 
-export default {
+const colorsTheme = {
     title: 'Colors/Theme',
     argTypes: {
         color: {
@@ -25,6 +25,8 @@ export default {
         }
     }
 }
+
+export default colorsTheme;
 
 export const Palette = () => {
     const themeLocal = useTheme()

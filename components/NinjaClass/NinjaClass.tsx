@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core'
+import { PropsWithChildren } from "react";
 //import Shuriken from './shuriken.svg'
 
 export type NinjaClassOption = 'viper' | 'tiger' | 'dragon' | 'crane'
@@ -58,7 +59,7 @@ const NinjaClass = ({
     children,
     ninjaClass,
     ...rest
-}: INinjaClassProps) => {
+}: PropsWithChildren<INinjaClassProps>) => {
     const classes = useStylesNC()
     return (
         <span className={`${classes[ninjaClass]} ${classes.all}`}>

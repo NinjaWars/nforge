@@ -16,28 +16,31 @@ describe('<CharacterContext />', () => {
     }
     it('renders a mock user in context', () => {
         const div = document.createElement('div')
+        const root = ReactDOM.createRoot(div)
         act(() => {
-            ReactDOM.render(
-                <>
-                    <CharacterProvider
+            root.render(
+
+                <CharacterProvider
                         value={{ loading: false, ninja: mockCharacter }} mock={true}
                     >
                         <CharacterRenderer />
-                    </CharacterProvider>
-                </>,
-                div
-            )
+                </CharacterProvider>)
+            root.unmount(div)
         })
-        ReactDOM.unmountComponentAtNode(div)
     })
     it('displays a mock user to the screen', () => {
+        const div = document.createElement('div')
+        const root = ReactDOM.createRoot(div)
         act(() => {
-            render(
-                <CharacterProvider value={{ loading: false, ninja: mockCharacter }} mock={true}>
+            root.render(
+
+                <CharacterProvider
+                    value={{ loading: false, ninja: mockCharacter }} mock={true}
+                >
                     <CharacterRenderer />
-                </CharacterProvider>
-            )
+                </CharacterProvider>)
         })
         expect(screen.getByText(/Wash/i)).toBeTruthy()
+        root.unmount(div)
     })
 })

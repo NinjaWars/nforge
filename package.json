@@ -56,7 +56,7 @@
   },
   "husky": {
     "hooks": {
-      "post-commit": "echo 'Running tests after commit...' && CI=true yarn test && yarn tsc",
+      "post-commit": "echo 'Running tests after commit...' && CI=true yarn lint && yarn tsc",
       "post-push": "CI=true && yarn unit-test && yarn lint && yarn tsc"
     }
   },

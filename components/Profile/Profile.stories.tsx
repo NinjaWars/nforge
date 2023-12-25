@@ -1,11 +1,11 @@
 import Profile from './Profile'
 import mockPerson from '../mocks/mockPerson'
 import { Author } from '../models/Author'
+import type { Meta } from '@storybook/react';
 
 const mockPersons = new Array(4).fill(mockPerson)
 
-
-export default {
+const meta: Meta<typeof Profile> = {
     title: 'Components/Profile',
     decorators: [
     ],
@@ -14,7 +14,10 @@ export default {
             action: 'Profile clicked'
         }
     }
-}
+};
+
+export default meta;
+
 
 export const Basic = (args: any) => {
     return (

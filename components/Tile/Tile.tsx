@@ -1,5 +1,6 @@
 import React from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
+import { PropsWithChildren } from "react";
 
 export interface TileProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string
@@ -44,14 +45,22 @@ const useStyles = makeStyles((theme: Theme) => ({
 /**
  * A rectangular Tile for layout visual color alternation
  */
-const Tile = ({ className, children, theme = 'light', compact = true, ...rest }: TileProps) => {
+const Tile = ({
+    className,
+    children,
+    theme = 'light',
+    compact = true,
+    ...rest
+}: PropsWithChildren<TileProps>) => {
     const classes = useStyles()
     const themes = {
         light: classes.light,
         dark: classes.dark
     }
     return (
-        <div className={`${classes.root} ${themes[theme]} ${compact ? '' : classes.spacy} ${className}`} {...rest}>
+        <div
+            className={`${classes.root} ${themes[theme]} ${compact ? '' : classes.spacy} ${className}`}
+            {...rest}>
             {children}
         </div>
     )
