@@ -1,6 +1,7 @@
-import { NinjaClassOption, SelfStatus } from 'components'
 import mockCharacter from '@/data/mockCharacter'
 import { CharacterProvider, useCharacter } from './CharacterContext'
+import { NinjaClassOption } from '@/components/NinjaClass';
+import SelfStatus from '@/components/SelfStatus';
 
 const storyConfig = {
     title: 'Context/CharacterContext',

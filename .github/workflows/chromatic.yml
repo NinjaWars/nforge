@@ -12,8 +12,10 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
-        # ⚠️ Pick one of these, matching the package manager for your project
         run: yarn install --immutable --immutable-cache --check-cache
+        
+      - name: Avoid Telemetry Message
+        run: yarn next telemetry disable
 
       - name: Publish to Chromatic
         uses: chromaui/action@latest

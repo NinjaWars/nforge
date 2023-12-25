@@ -88,7 +88,7 @@ const Profile = ({ className, children, person, ...rest }: ProfileProps) => {
                                 {person.title && <li><Icon icon={faHatWizard} /> {person.title}</li>}
                                 {person.socialUrl && <li><Linkify>{person.socialUrl}</Linkify></li>}
                                 {person.charName && <li><Icon icon={faDice} />
-                                    Character name: <span>{person.charName}</span></li>}
+                                    <label>Character name:</label> <span>{person.charName}</span></li>}
                             </ul>
                         </div>
                         {person.bio && <blockquote className={classes.bio}>{person.bio}</blockquote>}

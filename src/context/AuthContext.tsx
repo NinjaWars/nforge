@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 import { Auth } from '@/auth'
-import { User } from '@/models/User'
+import { User } from '@/components/models/User'
 import { useEffect, useState, useMemo } from 'react'
 import { createContext, useContext } from 'react'
 import logger from '@/utils/logger'

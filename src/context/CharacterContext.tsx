@@ -2,10 +2,10 @@
 
 import { DataStore } from '@/datastore'
 //import createNinja from 'control/createNinja'
-import { Character, Physical } from 'models'
-import { NinjaModel } from 'models/NinjaModel'
+import { Character, Physical } from '@/components/models'
+import { NinjaModel } from '@/components/models/NinjaModel'
 import { createContext, useContext, useState, useEffect } from 'react'
-import logger from 'utils/logger'
+import logger from '@/utils/logger'
 
 interface NinjaInfo {
     loading: boolean
