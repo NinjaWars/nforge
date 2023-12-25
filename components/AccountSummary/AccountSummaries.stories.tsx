@@ -1,9 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import AccountSummary from '..'
+import AccountSummary from './AccountSummary'
 
 
-export default {
+const Meta = {
     title: 'Components/AccountSummary',
     component: AccountSummary,
     decorators: [
@@ -15,9 +15,11 @@ export default {
     },
 } as ComponentMeta<typeof AccountSummary>
 
-const Template: ComponentStory<typeof AccountSummary> = (args) => (
+export default Meta
+
+const Template: ComponentStory<typeof AccountSummary> = (args: any) => (
     <>
-        <AccountSummary {...args}/>
+        <AccountSummary {...args} />
     </>
 )
 

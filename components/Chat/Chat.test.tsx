@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { default as Chat } from './Chat'
 
 describe('<Chat />', () => {
@@ -32,7 +32,8 @@ describe('<Chat />', () => {
             }
         })
         const div = document.createElement('div')
-        const root = ReactDOM.createRoot(div).render(<Chat chats={chats2} {...defaultArgs} />)
-        root.unmount(div)
+        const root = createRoot(div)
+        root.render(<Chat chats={chats2} {...defaultArgs} />)
+        root.unmount()
     })
 })
