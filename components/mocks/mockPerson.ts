@@ -1,4 +1,4 @@
-import { Author } from 'models/Author'
+import { Author } from '../models/Author'
 const mockPerson: Author = {
     name: 'George Washington',
     title: 'Administrator & Buddy',

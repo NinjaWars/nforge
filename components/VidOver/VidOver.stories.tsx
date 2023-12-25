@@ -1,28 +1,27 @@
-// eslint-disable-next-line no-unused-vars
-import testVideo from '../assets/videos/movie.mp4'
-import image from '../assets/youtube.svg'
 import { VidOver } from '../'
 import type { Meta } from '@storybook/react';
 
-const meta: Meta<typeof Button> = {
-    component: Button,
+const meta: Meta<typeof VidOver> = {
+    component: VidOver,
     title: 'Components/VidOver',
 };
 
 export default meta;
 
-const sourcePairs = [{ source: testVideo, type: 'video/mp4' }]
+const videoPath = '/videos/movie.mp4'
+
+const sourcePairs = [{ source: videoPath, type: 'video/mp4' }]
 
 export const VidWithPoster = () => (
     <div>
         <VidOver
             style={{ height: '20rem', width: '100vw' }}
-            poster={image}
+            poster={videoPath}
             sourcePairs={sourcePairs}
             muted={true}
             autoPlay={true}
         >
-            top context placeholder text
+            simple placeholder text content for the vidover 
         </VidOver>
     </div>
 )

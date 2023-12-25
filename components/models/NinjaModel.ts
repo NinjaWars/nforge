@@ -1,4 +1,4 @@
-import { Character, Physical } from 'models'
+import { Character, Physical } from '.'
 
 export interface NinjaModel extends Character, Physical {
     totalHealth: () => number

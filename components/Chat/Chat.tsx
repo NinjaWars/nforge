@@ -6,13 +6,18 @@ import styles from './chat.module.css'
 import FChat from './FChat'
 import { Skeleton } from '@material-ui/lab'
 
+const config = {
+    url: '/village',
+    remote: 'https://www.ninjawars.net/',
+}
+
 // React hook form: https://react-hook-form.com/get-started#IntegratingwithUIlibraries
 
 export interface SChatMessage {
     id: React.Key | null | undefined,
     by: string,
     datetime: string | Date,
-    message: string | number | boolean | {} | React.ReactNode
+    message: string | number | boolean | React.ReactNode
 }
 
 export interface SendChat {
@@ -79,14 +84,21 @@ class Chat extends Component<ChatProps, {}> {
                     </div>
                 ) : null
                 )} {/* Send only if no iframe*/}
-                {!noReframe ? <FChat /> :
+                {!noReframe ? <FChat url={config.url} remote={config.remote} /> :
                     chats && <>
                         <section className={styles['chat-messages-area']}>
                             {loading && <>
                                 {Array(10).map((_, index) => (<Skeleton key={index}>{'...................'}</Skeleton>))}
                             </>}
                             {!loading && chats.map((chat) => (
-                                <ChatMessage className={styles['chat-message']} key={chat.id} by={chat.by} datetime={chat.datetime}>{chat.message}</ChatMessage>
+                                <ChatMessage
+                                    className={styles['chat-message']}
+                                    key={chat.id}
+                                    by={chat.by}
+                                    datetime={chat.datetime}
+                                >
+                                    {(chat.message ?? '')}
+                                </ChatMessage>
                             ))}
                         </section>
                         <small style={{ color: 'lightgray' }}>{chats.length} chats found.</small>

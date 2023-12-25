@@ -6,7 +6,7 @@ import {
     Grid,
     Button,
 } from '@material-ui/core'
-import { News as INews } from 'models'
+import { News as INews } from '@/components/models'
 import News from './News'
 import { SText } from '..'
 import { Author } from '../models/Author'

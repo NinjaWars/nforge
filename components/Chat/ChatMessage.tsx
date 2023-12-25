@@ -16,7 +16,13 @@ interface ChatMessageProps {
  * @param {*} props
  */
 const ChatMessage = ({ by, datetime, classes, className, children, ...rest }: PropsWithChildren<ChatMessageProps>) => {
-    const options = { month: 'long' as 'long', day: 'numeric' as 'numeric', year: 'numeric' as 'numeric', hour: 'numeric' as 'numeric', minute: 'numeric' as 'numeric', }
+    const options = {
+        month: 'long' as 'long',
+        day: 'numeric' as 'numeric',
+        year: 'numeric' as 'numeric',
+        hour: 'numeric' as 'numeric',
+        minute: 'numeric' as 'numeric',
+    }
     const dRender = datetime instanceof Date ? datetime.toLocaleDateString('en-US', options) : datetime
     const utc = datetime instanceof Date ? datetime.toUTCString() : datetime
     return (

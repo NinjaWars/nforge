@@ -1,6 +1,7 @@
 /* eslint jsx-a11y/media-has-caption: 0 */
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, Theme } from '@material-ui/core/styles'
 import styles from './video-overlay.module.css'
+import { PropsWithChildren } from "react";
 
 interface VidOverProps extends React.ComponentPropsWithoutRef<"div"> {
     sourcePairs: { source: string, type: string }[],
@@ -8,11 +9,11 @@ interface VidOverProps extends React.ComponentPropsWithoutRef<"div"> {
     className?: string,
     autoPlay: boolean,
     muted: boolean,
-    children: React.ReactNode,
+    style: { height: string; width: string; }
 }
 
 // Currently using the css module for all these
-const useStyles = makeStyles(theme=>({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {}
 }))
 
@@ -20,7 +21,7 @@ const useStyles = makeStyles(theme=>({
  * A video overlay area to put a video background with content on top.
  * @param {*} props
  */
-const VidOver = ({ sourcePairs, poster, className, children, ...rest }: VidOverProps) => {
+const VidOver = ({ sourcePairs, poster, className, children, ...rest }: PropsWithChildren<VidOverProps>) => {
     const classes = useStyles()
     return ( // eslint-disable-next-line jsx-a11y/media-has-caption
         <div className={`${styles.banner} ${classes.root} ${className}`} {...rest}>
