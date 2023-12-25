@@ -38,4 +38,20 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Created by https://www.gitignore.io/api/visualstudiocode
+# Edit at https://www.gitignore.io/?templates=visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*      # Maybe .vscode/**/* instead - see comments
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# End of https://www.gitignore.io/api/visualstudiocode
+
+# misc
 tsconfig.tsbuildinfo
+
+
