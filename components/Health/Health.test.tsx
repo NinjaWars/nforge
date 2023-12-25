@@ -1,13 +1,14 @@
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import Health from './Health'
 
 describe('<Health />', () => {
     it('renders the Health area', () => {
         const div = document.createElement('div')
-        const root = ReactDOM.createRoot(div).render(<Health char={{
+        const root = createRoot(div)
+        root.render(<Health char={{
             health: 50,
             totalHealth: 100
         }} />)
-        root.unmount(div)
+        root.unmount()
     })
 })

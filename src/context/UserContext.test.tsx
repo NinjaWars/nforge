@@ -24,7 +24,7 @@ describe('<UserContext />', () => {
             </>,
             div
         )
-        root.unmount(div);
+        root.unmount();
     })
     it('displays a mock user to the screen', () => {
         render(

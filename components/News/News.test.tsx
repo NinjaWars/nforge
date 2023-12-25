@@ -5,7 +5,8 @@ import mockNews from '../models/mockNews'
 describe('<News />', () => {
     it('renders the News area', () => {
         const div = document.createElement('div')
-        const root = createRoot(div).render(<News article={mockNews[0]} />)
+        const root = createRoot(div)
+        root.render(<News article={mockNews[0]} />)
         root.unmount()
     })
 })

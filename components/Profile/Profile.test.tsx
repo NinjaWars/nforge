@@ -1,12 +1,10 @@
 import { fireEvent, render, screen, act } from '@testing-library/react';
 import { ThemeProvider } from '@material-ui/core/styles'
 import mockPerson from '../mocks/mockPerson'
-import { createRoot } from 'react-dom/client'
+//import { createRoot } from 'react-dom/client'
 import theme from '@/theme'
 import Profile from './Profile'
-
 import { composeStory } from '@storybook/react';
-
 import Meta, { Basic, Multi } from './Profile.stories';
 
 const BasicStory = composeStory(Basic, Meta)

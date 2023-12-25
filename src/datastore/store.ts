@@ -50,13 +50,18 @@ interface ModelInstance {
     name: string
     fields: unknown
     [key: string]: unknown
-
 }
 
-const initializeDataByModel = (modelType: string, schema: unknown): ModelInstance => {
+interface SchemaShape {
+    models: {
+        [key: string]: ModelInfo
+    }
+}
+
+const initializeDataByModel = (modelType: string, schema: SchemaShape): ModelInstance => {
     const model = schema.models[modelType] as ModelInfo
     const fields = model.fields
-    const data = {}
+    const data: Record<string, unknown> = {}
     Object.keys(fields).forEach((fieldName) => {
         data[fieldName] = null
     })
@@ -65,7 +70,7 @@ const initializeDataByModel = (modelType: string, schema: unknown): ModelInstanc
     return modelInstance
 }
 
-const collateDataFields = (model: ModelInfo, data: Record<string, unknown>, schema: unknown) => {
+const collateDataFields = (model: ModelInfo, data: Record<string, unknown>) => {
     const fields = model.fields as string[]; // Cast model.fields to string[]
     const collatedData: Record<string, unknown> = {}
     Object.keys(fields).forEach((fieldName) => {
@@ -81,7 +86,7 @@ const DataStore = {
         const namedStoreType = storeType as string
         const emptyModel = initializeDataByModel(namedStoreType, allModels)
         const data = await fetchDataByModel(namedStoreType, id, allModels)
-        return collateDataFields(emptyModel, data, allModels)
+        return collateDataFields(emptyModel, data)
     }
 
 }

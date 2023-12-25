@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles"
 import { Feedbackify } from ".."
+import SInfo from "../../stories/components/SInfo";
 
 const feedbackifyConfig = {
     title: 'Components/Feedbackify',
@@ -34,7 +35,9 @@ export const FeedbackifyBasic = (args: any) => {
 }
 
 FeedbackifyBasic.args = {
-    className: 'Feedbackify-custom'
+    className: 'Feedbackify-custom',
+    up: 0,
+    down: 0,
 }
 
 export const WithInitialData = (args: any) => (
@@ -50,11 +53,14 @@ WithInitialData.argTypes = {
 //argTypes: { onClick: { action: 'clicked' } },
 
 export const WithAnOnchange = (args: any) => (
-    <Feedbackify
-        up={44444}
-        down={66666}
-        {...args}
-    />
+    <>
+        <SInfo>Higher 5 digit values:</SInfo>
+        <Feedbackify
+            up={44444}
+            down={66666}
+            {...args}
+        />
+    </>
 )
 
 WithAnOnchange.argTypes = {

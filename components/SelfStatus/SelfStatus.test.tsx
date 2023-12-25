@@ -13,7 +13,7 @@ describe('<SelfStatus />', () => {
     }
     it('renders the SelfStatus area', () => {
         const div = document.createElement('div')
-        const root = createRoot(div).render(<SelfStatus stats={mockSelfStats} requirement={55} />)
+        const root = createRoot(<SelfStatus stats={mockSelfStats} requirement={55} />, div)
         root.unmount()
     })
 })

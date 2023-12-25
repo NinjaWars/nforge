@@ -75,6 +75,7 @@ class Feedbackify extends Component {
                     className={`up btn ${
                         this.state.current === 'up' ? 'active' : ''
                     }`}
+                    aria-label="arrow-up"
                 >
                     {upToggle}{' '}
                     <span className="up-counter">
@@ -86,6 +87,7 @@ class Feedbackify extends Component {
                     className={`down btn ${
                         this.state.current === 'up' ? 'active' : ''
                     }`}
+                    aria-label="arrow-down"
                 >
                     {downToggle}{' '}
                     <span className="down-counter">
